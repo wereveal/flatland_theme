@@ -1,0 +1,50 @@
+/*
+Theme Name: Flatland
+Theme URI: http://flatlandchurch.com/
+Author: David Royce, William Reveal
+Author URI: http://flatlandchurch.com/
+Description: Theme designed for Flatland Church, Omaha NE
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: flatland
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Flatland was started by using Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+    and enhanced use Bootstrap http://getbootstrap.com/ as developed by http://bootstrapwp.com/
+    finally changing to Flatland needs.
+*/
+
+@import "vars/colors";
+@import "vars/structure";
+@import "vars/typography";
+
+@import "mixins";
+
+@import "common";
+
+@import "accessibility";
+
+@import "alignments";
+
+@import "content/widgets";
+
+@import "content/posts-and-pages";
+
+@import "content/asides";
+
+@import "content/comments";
+
+@import "content/infinite-scroll";
+
+@import "content/smiley";
+
+@import "content/captions";
+
+@import "content/galleries";
+
+@import "content/misc";
+

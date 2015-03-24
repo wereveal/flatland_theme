@@ -1,0 +1,30 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	@include center-block;
+}
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
+.aleft {
+    text-align: left;
+}
+.acenter {
+    text-align: center;
+}
+.aright {
+    text-align: right;
+}

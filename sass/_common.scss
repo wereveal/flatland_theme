@@ -1,0 +1,49 @@
+/* Changes from Bootstrap */
+html { font-size: $font_size_base; }
+body {
+    font-family: $font__main;
+    @media only screen and (max-width: 480px) {
+        padding: 0;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1, h2, h3 {
+    font-family: $font__main;
+    @include font_sc_extra_bold_italic;
+}
+h4, h5, h6 {
+    font-family: $font__main;
+    @include font_sc_bold_italic;
+}
+h1 { font-size: $font_size_h1; }
+h2 { font-size: $font_size_h2; }
+h3 { font-size: $font_size_h3; }
+h4 { font-size: $font_size_h4; }
+h5, h6 { font-size: $font_size_h5; }
+p {
+    font-size: $font_size_base;
+}
+b {
+    @include font_extra_bold;
+}
+strong {
+    @include font_bold;
+}
+i {
+    @include font_italic;
+}
+em {
+    @include font_medium_italic;
+}
+.font-large {
+    font-size: $font_size_large;
+}
+.font-tad-larger {
+    font-size: $font_size_larger;
+}
+.font-small {
+    font-size: $font_size_small;
+}

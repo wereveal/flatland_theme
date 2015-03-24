@@ -1,0 +1,21 @@
+$font_regular:           Verdana;
+$font_serif:             "Times New Roman";
+$font__main:             $font_regular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font__code:             Menlo, Consolas, "Courier 10 Pitch", "Courier New", Courier, monospace;;
+$font__pre:              $font__code;
+$font__line-height-body: 1.5;
+$font__line-height-pre:  1.6;
+
+$font_family_serif:      $font-serif, Georgia, Times, serif;
+
+$font_size_base:         14px;
+$font_size_large:        ceil(($font_size_base * 1.25)); // ~18px
+$font_size_larger:       ceil(($font_size_base * 1.1));  // ~16px
+$font_size_small:        ceil(($font_size_base * 0.85)); // ~12px
+
+$font_size_h1:           floor(($font_size_base * 1.75)); // ~24px
+$font_size_h2:           floor(($font_size_base * 1.45)); // ~20px
+$font_size_h3:           ceil(($font_size_base * 1.25)); // ~18px
+$font_size_h4:           ceil(($font_size_base * 1.1)); // ~16px
+$font_size_h5:           $font_size_base;
+$font_size_h6:           $font_size_base;

@@ -1,0 +1,13 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+img {
+	max-width: 100%;
+}
+
+/* Word Break for Long URLs especially */
+
+#primary, #secondary {
+    @include word-wrap;
+}

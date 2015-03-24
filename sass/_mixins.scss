@@ -1,0 +1,103 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin word-wrap() {
+    word-break: break-all;
+    /* for those that do not do word-break correctly */
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin rounded($radius) {
+    border-radius: $radius;
+}
+@mixin font_medium {
+    font-weight: 500;
+    font-style: normal;
+}
+@mixin font_bold {
+    font-weight: 700;
+    font-style: normal;
+}
+@mixin font_extra_bold {
+    font-weight: 900;
+    font-style: normal;
+}
+@mixin font_italic {
+    font-weight: 400;
+    font-style: italic;
+}
+@mixin font_medium_italic {
+    font-weight: 500;
+    font-style: italic;
+
+}
+@mixin font_bold_italic {
+    font-weight: 700;
+    font-style: italic;
+
+}
+@mixin font_extra_bold_italic {
+    font-weight: 900;
+    font-style: italic;
+
+}
+@mixin font_sc {
+    font-weight: 500;
+    font-style: normal;
+    font-variant: small-caps;
+}
+@mixin font_sc_bold {
+    font-weight: 700;
+    font-style: normal;
+    font-variant: small-caps;
+}
+@mixin font_sc_extra_bold {
+    font-weight: 900;
+    font-style: normal;
+    font-variant: small-caps;
+}
+@mixin font_sc_italic {
+    font-weight: 400;
+    font-style: italic;
+    font-variant: small-caps;
+}
+@mixin font_sc_bold_italic {
+    font-weight: 700;
+    font-style: italic;
+    font-variant: small-caps;
+}
+@mixin font_sc_extra_bold_italic {
+    font-weight: 900;
+    font-style: italic;
+    font-variant: small-caps;
+}

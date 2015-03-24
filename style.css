@@ -1,0 +1,348 @@
+/*
+Theme Name: Flatland
+Theme URI: http://flatlandchurch.com/
+Author: David Royce, William Reveal
+Author URI: http://flatlandchurch.com/
+Description: Theme designed for Flatland Church, Omaha NE
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: flatland
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Flatland was started by using Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+    and enhanced use Bootstrap http://getbootstrap.com/ as developed by http://bootstrapwp.com/
+    finally changing to Flatland needs.
+*/
+/* Changes from Bootstrap */
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1, h2, h3 {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+h4, h5, h6 {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5, h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+}
+
+b {
+  font-weight: 900;
+  font-style: normal;
+}
+
+strong {
+  font-weight: 700;
+  font-style: normal;
+}
+
+i {
+  font-weight: 400;
+  font-style: italic;
+}
+
+em {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.font-large {
+  font-size: 18px;
+}
+
+.font-tad-larger {
+  font-size: 16px;
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.aleft {
+  text-align: left;
+}
+
+.acenter {
+  text-align: center;
+}
+
+.aright {
+  text-align: right;
+}
+
+/* WP Widgets */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+  display: none;
+}
+
+/* Posts and Pages Styling */
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5rem 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5rem;
+}
+
+.entry-meta .posted-on, .entry-meta .byline {
+  margin-right: 20px;
+}
+.entry-meta .posted-on a, .entry-meta .byline a {
+  color: royalblue;
+  text-decoration: none;
+}
+.entry-meta .posted-on a:hover, .entry-meta .byline a:hover {
+  color: midnightblue;
+  text-decoration: underline;
+}
+.entry-meta .posted-on .fa, .entry-meta .byline .fa {
+  color: royalblue;
+}
+
+/* Don't display the asides */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/* Comments Section */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/* WP Smiley Styling */
+img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Captions */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/* Basic WP Galleries */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+img {
+  max-width: 100%;
+}
+
+/* Word Break for Long URLs especially */
+#primary, #secondary {
+  word-break: break-all;
+  /* for those that do not do word-break correctly */
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
