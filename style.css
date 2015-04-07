@@ -228,19 +228,23 @@ em {
   margin: 0 0 1.5rem;
 }
 
-.entry-meta .posted-on, .entry-meta .byline {
-  margin-right: 20px;
+.entry-meta .posted-on, .entry-meta .cat-links, .entry-meta .tags-links {
+  margin-right: 1rem;
 }
-.entry-meta .posted-on a, .entry-meta .byline a {
+.entry-meta .posted-on a, .entry-meta .byline a, .entry-meta .cat-links a, .entry-meta .tags-links a, .entry-meta .edit-link a {
   color: royalblue;
   text-decoration: none;
 }
-.entry-meta .posted-on a:hover, .entry-meta .byline a:hover {
+.entry-meta .posted-on a:hover, .entry-meta .byline a:hover, .entry-meta .cat-links a:hover, .entry-meta .tags-links a:hover, .entry-meta .edit-link a:hover {
   color: midnightblue;
   text-decoration: underline;
 }
-.entry-meta .posted-on .fa, .entry-meta .byline .fa {
+.entry-meta .posted-on .fa, .entry-meta .byline .fa, .entry-meta .cat-links .fa, .entry-meta .tags-links .fa, .entry-meta .edit-link .fa {
   color: royalblue;
+}
+
+.search-highlight {
+  background: #FFFF00;
 }
 
 /**

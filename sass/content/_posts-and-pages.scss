@@ -8,7 +8,7 @@
 
 .hentry {
 	margin: 0 0 1.5rem;
-	border-bottom: 1px solid $color__border-post-bottom;
+	border-bottom: 1px solid $color_border-post-bottom;
 	padding-bottom: 1rem;
 }
 
@@ -34,19 +34,24 @@
 }
 
 .entry-meta {
-    .posted-on, .byline {
-	    margin-right: 20px;
+    .posted-on, .cat-links, .tags-links {
+        margin-right: 1rem;
+    }
+    .posted-on, .byline, .cat-links, .tags-links, .edit-link {
 	    a {
-	        color: $color__link;
+	        color: $color_link;
 	        text-decoration: none;
 	    }
 	    a:hover {
-	        color: $color__link-hover;
+	        color: $color_link-hover;
 	        text-decoration: underline;
 	    }
 	    .fa {
-	        color: $color__link;
+	        color: $color_link;
 	    }
-
 	}
+}
+
+.search-highlight {
+    background: $color_highlight;
 }

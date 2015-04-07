@@ -78,12 +78,12 @@ function flatland_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( '<i class="fa fa-clock-o"></i> %s', 'post date', 'flatland' ),
+		_x( '<span class="fa fa-clock-o"></span> %s', 'post date', 'flatland' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( '<a class="fa fa-user"></i> %s', 'post author', 'flatland' ),
+		_x( '<span class="fa fa-user"></span> %s', 'post author', 'flatland' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -102,23 +102,23 @@ function flatland_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'flatland' ) );
 		if ( $categories_list && flatland_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'flatland' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links"><i class="fa fa-sitemap"></i> ' . __( 'Posted in %1$s', 'flatland' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'flatland' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'flatland' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links"><i class="fa fa-tags"></i> ' . __( 'Tagged %1$s', 'flatland' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><i class="fa fa-comments-o"></i> ';
 		comments_popup_link( __( 'Leave a comment', 'flatland' ), __( '1 Comment', 'flatland' ), __( '% Comments', 'flatland' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'flatland' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'flatland' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' );
 }
 endif;
 

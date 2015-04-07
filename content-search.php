@@ -20,7 +20,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php flatland_excerpt_highlight(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">

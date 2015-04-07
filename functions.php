@@ -79,7 +79,7 @@ add_action('after_setup_theme', 'flatland_setup');
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function flatland_widgets_init() {
-    $right_sidebar = array(
+    $a_right_sidebar = array(
         'name'          => __('Sidebar', 'flatland'),
         'id'            => 'sidebar-1',
         'description'   => '',
@@ -88,7 +88,7 @@ function flatland_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h1>',
     );
-    $left_sidebar = array(
+    $a_left_sidebar = array(
         'name'          => __('Sidebar Left', 'flatland'),
         'id'            => 'sidebar-left',
         'description'   => '',
@@ -97,8 +97,19 @@ function flatland_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h1>',
     );
-	register_sidebar($right_sidebar);
-	register_sidebar($left_sidebar);
+	register_sidebar($a_right_sidebar);
+	register_sidebar($a_left_sidebar);
+
+	$a_contact = array(
+		'name'          => __( 'Contact', 'flatland' ),
+		'id'            => 'contact',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	);
+	register_sidebar($a_contact);
 }
 add_action('widgets_init', 'flatland_widgets_init');
 
@@ -119,8 +130,9 @@ function flatland_scripts() {
 }
 add_action('wp_enqueue_scripts', 'flatland_scripts');
 
-
-
+/**
+ * Add IE8 support
+ */
 function flatland_ie_scripts() {
     $html_shiv = <<<EOT
 
@@ -136,6 +148,26 @@ EOT;
 }
 add_action('wp_head', 'flatland_ie_scripts');
 
+
+/**
+ * Custom Edit Button
+ */
+function flatland_edit_post_link($output) {
+    $output = str_replace('class="post-edit-link"', 'class="post-edit-link btn btn-danger btn-xs"', $output);
+    return $output;
+}
+add_filter('edit_post_link', 'flatland_edit_post_link');
+
+/**
+ * Custom function to highlight search terms
+ */
+function flatland_excerpt_highlight() {
+    $excerpt = get_the_excerpt();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
+
+    echo '<p>' . $excerpt . '</p>';
+}
 
 /**
  * Custom template tags for this theme.
