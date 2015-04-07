@@ -1,3 +1,8 @@
+/**
+ * Misc Styles
+ * @file content/_misc.scss
+ */
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -7,7 +12,6 @@ img {
 }
 
 /* Word Break for Long URLs especially */
-
 #primary, #secondary {
     @include word-wrap;
 }

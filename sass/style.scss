@@ -13,9 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Flatland was started by using Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-    and enhanced use Bootstrap http://getbootstrap.com/ as developed by http://bootstrapwp.com/
-    finally changing to Flatland needs.
+The Flatland theme was developed based on a tutorial at http://bootstrapwp.com/
 */
 
 @import "vars/colors";
@@ -46,5 +44,10 @@ Flatland was started by using Underscores http://underscores.me/, (C) 2012-2015 
 
 @import "content/galleries";
 
+@import "content/header";
+
+@import "content/footer";
+
 @import "content/misc";
 
+@import "media";

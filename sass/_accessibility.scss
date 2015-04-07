@@ -1,4 +1,7 @@
-/* Text meant only for screen readers. */
+/**
+ * Text meant only for screen readers.
+ * @file _accessibility.scss
+ */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;

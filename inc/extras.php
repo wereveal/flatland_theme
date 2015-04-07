@@ -69,3 +69,17 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'flatland_render_title' );
 endif;
+
+/**
+ * Custom Read More Button
+ */
+function flatland_read_more() {
+    return '&nbsp;<a class="more-link btn btn-primary btn-xs" href="' . get_permalink() . '">Read More</a>';
+}
+add_filter('the_content_more_link', 'flatland_read_more');
+
+function flatland_excerpt_more() {
+    global $post;
+    return '&nbsp;<a class="moretag btn btn-primary btn-xs" href="' . get_permalink($post->ID) . '">Read More</a>';
+}
+add_filter('excerpt_more', 'flatland_exceprt_more');

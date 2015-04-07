@@ -13,22 +13,18 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Flatland was started by using Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-    and enhanced use Bootstrap http://getbootstrap.com/ as developed by http://bootstrapwp.com/
-    finally changing to Flatland needs.
+The Flatland theme was developed based on a tutorial at http://bootstrapwp.com/
 */
-/* Changes from Bootstrap */
+/**
+ * Changes from Bootstrap
+ * @file _common.scss
+ */
 html {
   font-size: 14px;
 }
 
 body {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-@media only screen and (max-width: 480px) {
-  body {
-    padding: 0;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,7 +102,10 @@ em {
   font-size: 12px;
 }
 
-/* Text meant only for screen readers. */
+/**
+ * Text meant only for screen readers.
+ * @file _accessibility.scss
+ */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -135,6 +134,10 @@ em {
   /* Above WP toolbar. */
 }
 
+/**
+ * Alignments
+ * @file _alignments.scss
+ */
 .alignleft {
   display: inline;
   float: left;
@@ -173,7 +176,10 @@ em {
   text-align: right;
 }
 
-/* WP Widgets */
+/**
+ * WP Widgets
+ * @file content/_widgets.scss
+ */
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
@@ -187,7 +193,10 @@ em {
   display: none;
 }
 
-/* Posts and Pages Styling */
+/**
+ * Posts and Pages Styling
+ * @file content/_posts-and-pages.scss
+ */
 .sticky {
   display: block;
 }
@@ -234,13 +243,19 @@ em {
   color: royalblue;
 }
 
-/* Don't display the asides */
+/**
+ * Asides
+ * @file content/_asides.scss
+ */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
 }
 
-/* Comments Section */
+/**
+ * Comments Section
+ * @file content/_comments.scss
+ */
 .comment-content a {
   word-wrap: break-word;
 }
@@ -249,6 +264,10 @@ em {
   display: block;
 }
 
+/**
+ * Infinite Scroll Styles
+ * @file content/_infinite-scroll.scss
+ */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -261,7 +280,10 @@ em {
   display: block;
 }
 
-/* WP Smiley Styling */
+/**
+ * WP Smiley Styling
+ * @file content/_smiley.scss
+ */
 img.wp-smiley {
   border: none;
   margin-bottom: 0;
@@ -269,7 +291,10 @@ img.wp-smiley {
   padding: 0;
 }
 
-/* Captions */
+/**
+ * Captions
+ * @file content/_captions.scss
+ */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
@@ -287,7 +312,10 @@ img.wp-smiley {
   text-align: center;
 }
 
-/* Basic WP Galleries */
+/**
+ * Default WP Galleries
+ * @file content/_galleries.scss
+ */
 .gallery {
   margin-bottom: 1.5em;
 }
@@ -327,6 +355,22 @@ img.wp-smiley {
   display: block;
 }
 
+/**
+ * Header Styles
+ * @file content/_header.scss
+ */
+/**
+ * Footer Styles
+ * @file content/_footer.scss
+ */
+.site-footer .copyright {
+  float: left;
+}
+
+/**
+ * Misc Styles
+ * @file content/_misc.scss
+ */
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -344,5 +388,25 @@ img {
   -moz-hyphens: auto;
   hyphens: auto;
 }
+
+/**
+ * Media Queries
+ * @file _media.scss
+ */
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  body {
+    padding: 0;
+  }
+}
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .site-footer .copyright {
+    float: right;
+  }
+}
+/* Large Devices, Wide Screens */
 
 /*# sourceMappingURL=style.css.map */

@@ -19,13 +19,13 @@
               'container'       => '',
               'menu_class'      => 'footer-menu',
               'theme_location'  => 'footer-menu')
-            ); 
+            );
             ?>
             </nav>
         <?php endif; ?>
         </div>
         <div class="col-md-6 col-lg-6">
-            &copy; Flatland Church 2015
+            <p class="copyright">&copy; Flatland Church 2015</p>
         </div>
     </div> <!-- .row -->
 </div> <!-- .container -->
