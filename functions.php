@@ -117,11 +117,8 @@ add_action('widgets_init', 'flatland_widgets_init');
  * Enqueue scripts and styles.
  */
 function flatland_scripts() {
-    wp_enqueue_style('flatland-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.2', 'all');
-	wp_enqueue_style('flatland-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.3.0', 'all');
 	wp_enqueue_style('flatland-style', get_stylesheet_uri());
 
-    wp_enqueue_script('flatland-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.2', true);
 	wp_enqueue_script('flatland-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -129,6 +126,33 @@ function flatland_scripts() {
 	}
 }
 add_action('wp_enqueue_scripts', 'flatland_scripts');
+
+/**
+ * Adds files needed for theme that are served from a CDN
+ */
+function flatland_cdn_head() {
+    $html = <<<EOT
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+EOT;
+    print $html;
+}
+add_action('wp_head', 'flatland_cdn_head');
+
+/**
+ * Adds files needed for theme that are served from a CDN
+ */
+function flatland_cdn_footer() {
+    $html = <<<EOT
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+EOT;
+    print $html;
+}
+add_action('wp_footer', 'flatland_cdn_footer');
 
 /**
  * Add IE8 support
